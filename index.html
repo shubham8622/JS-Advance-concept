@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Javscript Advance Concept</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="container">
+                <div class="functions">
+                    <div class="heading">
+                        <h1>Functions in javascript</h1>
+                    </div>
+                    <ul class="function-description">
+                        <li>
+                            <p><b>Functions</b> are set of statements that perform a task and calculates a value.</p>
+                            <p>A <b>function definition</b> (also called a <b>function declaration</b>, or <b>function statement</b>) consists of the function keyword, followed by the name of the function.
+                            A list of parameters to the function, enclosed in parentheses and separated by commas.
+                            The JavaScript statements that define the function, enclosed in curly brackets</p>
+                            <p><b>Function syntax.</b></p>
+                            <img src="./assets/images/regularFunctionExample.png" alt=""> 
+                        </li>
+                        <li>
+                           <h3><b>Function Expression</b></h3>
+                           <p>Storing a function into the variable is called <b>function expression</b></p>
+                            <img src="./assets/images/functionExpression.png">
+<ul class="expression">
+    <li>
+        <p><b style="font-size: 20px;">Anonymous function</b> A function without name is called <b>Anonymous function</b></p>
+        <p><b>Anonymous function does not have their own identity.</b></p>
+        <p><b>Synatx</b>
+<pre><mark>
+    function(){
+
+    }
+</mark></pre>
+</p>
+<p>But, if you create a Anonymous function like that you will get a syntax error.</p>
+<p>Beacuse, it looks like <b>function statement</b> but Anonymous function does not have name. But, ECMAscript sepecification says that a function statement should have a name.</p>
+<p>It will give an error <mark class="red">function statement require a function name.</mark></p>
+<p>
+    <b>NOTE:</b> Anonymous functions are used as a argument to another function.
+<img src="./assets/images/anonymousFunction.png" alt="">
+
+</p>
+    </li>
+    <li>
+        <p><b style="font-size: 25px;">Named function expression:</b> Named function expression are same as function expression. Instead of using an Anonymous function. We use a function with name.</p>
+        <p><b>Syntax:</b>
+        <img src="./assets/images/namedFunction.png" alt="">
+        </p>
+    </li>
+    <li>
+        <p><b style="font-size: 25px;">First class functions:</b> The ability of functions to be used as values and pass it as an agrument to another function and can be returned from the function. This ability is know as first class function.</p>
+        <p><b>Example:</b>
+            <img src="./assets/images/firstClassfunction.png" alt="">
+        </p>
+
+    </li>
+    <li>
+        <p><b style="font-size: 25px;">Arrow function:</b> Arrow functions was introduced in the ES6.It is a shortest way of writing a function.</p>
+        <p><b>Syntax</b>
+<img src="./assets/images/arrowFunction.png" alt="">       
+        </p>
+        <p>You can remove the parentheses if your are write a single statement.</p>
+        <p>
+            <b>Syntax</b>
+            <img src="./assets/images/shortArrowFunction.png" alt="">
+        </p>
+    </li>
+    <li>
+        <p><b style="font-size: 25px;">Higher order function:</b> The functions which take another functiona as an argument or return function from it is know as <b>Higher order function</b>.</p>
+        <p><b>Syntax</b>
+<img src="./assets/images/higherOrder.png" alt="">   
+        </p>
+    </li>
+    <li>
+        <p><b style="font-size: 25px;">Pure function</b> A pure function in JavaScript is a function that returns the same result if the same arguments(input) are passed in the function.</p>
+        <p><b>Syntax</b>
+<img src="./assets/images/pureFunction.png" alt="">   
+        </p>
+    </li>
+</ul>           
+                        </li>
+                        <li>
+                            <p>Difference b/w <b style="font-size: 20px;">function declearation</b> and <b style="font-size: 20px;">function expression</b></p>
+                            <ul class="fdfx">
+                                <li>
+                                    <p>
+                                        The first difference is the syntax. In <b>Function declearation</b>, we are creating a normal function but in <b>Function Expression</b>, we are storing a function in the varibale. 
+
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Hosting</b>, If you try to access function declaration before creating it you get the output i.e, <mark>a called</mark>.
+<img src="./assets/images/beforeCallFun.png" alt="">                                  
+<p><b>But in case of function expression,</b> if you have stored the function in the <mark>variable declared with var keyword.</mark> You will get <mark class="red">a is not a function</mark>. If it is stored in the <mark>variable declared with let or const</mark>. You will get an error <mark class="red"> b is not defined.</mark></p>
+<img src="./assets/images/beforeCallFunError.png" alt="">
+    <img src="./assets/images/bNotDefined.png" alt="">
+</mark>
+</pre>                                    
+</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Difference b/w <b style="font-size: 25px;">Normal function</b> and an <b style="font-size: 25px;">Arrow function</b></p>
+                            <blockquote>
+                                <ul>
+                                    <li>
+                                        <p><b>Arguments binding:</b> Arrow functions do not have an <b>arguments</b> binding. In the arguments you will get all the arguments passed to the function
+                                            <img src="./assets/images/regularFunction.png" alt=""> 
+                                        </p>
+                                    </li>
+                                    <li>
+                                    <p>Regular functions are constructible, they can be called using the <b>new</b> keyword.
+<img src="./assets/images/new.png" alt="">
+                                    </p>
+                                    </li>
+                                    <li>
+                                        <p>The value of <b>this</b> inside an arrow function remains the same throughout the lifecycle of the function. Whereas, if regular functon is created in the object then this will point to that object.</p>
+                                    </li>
+                                </ul>
+                                <ul class="arrow-noramal-fxn">
+                                    <li><p>
+                                        Curly brackets aren not required if only one expression is present.
+<pre><mark>
+    let add = (x, y) => x + y;
+</mark></pre>
+                                    </p></li>
+                                        <li><p>
+                                        If there is only one argument, then the parentheses are not required either:
+<pre><mark>
+let squareNum = x => x * x;
+</mark>
+</pre>
+                                    </p></li>
+                                        <li><p>
+                                        What if there are no arguments?
+<img src="./assets/images/arrowShortest.png" alt="">
+                                    </p></li>
+                                    <li><p>
+                                        Arrow functions can never be used as constructor functions. They can never be invoked with the new keyword.
+                                    </p></li>
+                                </ul>
+                            </blockquote>
+                        </li>
+                    </ul>
+                </div>
+                <div class="globalNamespace">
+                    <div class="heading">
+                        <h1>GlobalNamespace in javascript</h1>
+                    </div>
+                    <ul>
+                        <li><p>
+                            Default namespace is the window.
+                        </p></li>
+                        <li><p>
+                            All the variable and functions which we create are stored in the <b>window object</b> and throughout the code, we can access those variable anywhere in the code.
+                        </p></li>
+                        <li><p>
+                            But, there are some varibale which are declared in the functions. So, those variable has a block scope and cannot access those variable with the help of window. Block scope variables are only accessible with in that function. In which they are created.
+                        </p></li>
+                        <li>
+                            <p><b>Var</b> keyword has <mark>function scope</mark> and <mark>block scope</mark> </p>
+                            <p><b>let</b> and <b>const</b> has <mark>block scope</mark> and <mark>function scope</mark></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="iife">
+                    <div class="heading">
+                        <h1>IIFE(Immediately Invoked Function Expression) in Javacript</h1>
+                    </div>
+                    <ul>
+                        <li><p>An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.</p>
+                        <p><b>Syntax</b>
+<img src="./assets/images/IIFE.png" alt="">
+                        </p>
+                        </li>
+                        <li>
+                            <p>It is a design pattern which is also known as a <b>Self-Executing Anonymous</b> Function</p>
+                        </li>
+                        <li>
+                            <p>By placing functions and variables inside an immediately invoked function expression, you can avoid polluting them to the global object:</p>
+                        </li>
+                        <li>
+                            <p>
+                                The <b>for await...of </b>statement creates a loop iterating over async iterable objects 
+                            </p>
+                            <p><b>Syntax</b>
+<img src="./assets/images/forAwait.png" alt="">
+<img src="./assets/images/chunk.png" alt="">
+                            </p>
+                        </li>
+                        <li>
+                            <p><b>In above Example:</b> We have created an IIFE async function. This function is calling another function which is fetching data from an API. After getting data from an API the <b>for await of </b>runs and itergate over the data and console.log each product.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="this">
+                    <div class="heading">
+                        <h1>this in Javacript</h1>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <p>In JavaScript, the <b>this</b> keyword refers to an object it belongs to. It has different values depending upon where it is used.</p>
+                        </li>
+                        <li>
+                            <p><b>this</b> also refers to global object.</p>
+                        </li>
+                        <li>
+                            <p>In regular function this refers to window object.</p>
+                        </li>
+                        <li>
+                            <p>In a method, this refers to owner object.</p>
+                            <p><b>Example</b>
+                            <img src="./assets/images/this.png" alt="">
+                            </p>
+                        </li>
+                        <li>
+                            <p>In above example, <b>this</b> refers to the <b>obj</b></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="create-object">
+                    <div class="heading">
+                        <h1>Object creation in Javacript</h1>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>
+                                We can create object like this <mark>let a = {}</mark> inside the curly brackets we can add data in the form of key value.
+                            </p>
+                        </li>
+                        <li> <p> We can create object using constructor function.</p></li>
+                        <li>
+                            <p><b>Example</b>
+                                <img src="./assets/images/objectCreationNew.png" alt="">
+                            </p>
+                        </li>
+                        <li>
+                            <p>The <b>Object.create()</b> static method creates a new object, using an existing object as the prototype of the newly created object.</p>
+                        </li>
+                        <li>
+                            <p><b>Example</b>
+                                <img src="./assets/images/create.png" alt="">
+                            </p>
+                        </li>
+                        <li>
+                            <b>In the above example</b>, We are creating a new object using existing object. <b>Which is person</b>. So, i have created new object named as <b>me</b> and adding key values in the object.
+                        </li>
+                        <li>
+                            <p>Because we have create the <b>me</b> object using existing object named as person. So, person keys are also accessible to <b>me object</b>. Becuase of prototype chaining.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="prototypes">
+                    <div class="heading">
+                        <h1>Prototypes in Javascript</h1>
+                    </div>
+                    <ul>
+                        <li><p><b>Prototypes</b> are mechanism by which Javascript objects inherit features from one another.</p></li>
+                        <img src="./assets/images/proto.png" alt="">
+                        <li>
+                            <p>
+                                <b>In the above example</b>, we are creating an object using constructor function. <b>Inside the function</b> there are some properties customerName,accountNumber,balance.
+                            </p>
+                            <p>We are creating an Account of user <b>Developer</b>. Now, we want to update the balance of <a>Developer account</d>. Instead of adding function inside the object. What we have done. We have added those functions in the <b>BankAccount prototype.</b></p>
+                            <p>So, that the Account Which is created using BankAccount function should have access to his prototypes functions.</p>
+                            <p>And can use these functions anytime.</p>
+                            <p><b>NOTE:</b> If it does find it in the <b>BankAccount prototype</b> will go one level deep in the prototype of <b>Object</b></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="call-bind">
+                    <div class="heading">
+                        <h1>Call, Apply, Bind in Javascript</h1>
+                    </div>
+                    <ul>
+                        <li><p>Whenever you want to attach a function with an object. So that you can reuse that function. That time you need to use call, apply, bind. Because you cannot attach regular function with an object. But, there is difference between three of them.</p></li>
+                        <li><p><b>Example:</b></p>
+                        <img src="./assets/images/needOfCall.png" alt="">
+                        </li>
+                        <li>
+                            <p><b>In the above example:</b> We have created a <b>regular fuction</b> and that regular function is used in the object to get user email. But, util we don't create a function inside the object <b>this</b> will not refers to the object. It will point to the window object and in window object firstName not exists that's why it is returning undefined@gmail.com.</p>
+                        </li>
+                        <li><p>So, how we can use regular function with an object.</p></li>
+                        <li><p>Two ways of using <b>call method</b></p></li>
+                            <img src="./assets/images/callUse.png" alt="">
+                            <img src="./assets/images/callSeconduse.png" alt="">
+                        <li><p>Pass any type of args in the call. It can be array, object ,string, number</p></li>
+                        <img src="./assets/images/callArgs.png" alt="">
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>The difference b/w <b>call and apply</b> is that in call you can <b>pass any type of argument</b>. It can be <b>string, number, boolean, object or array</b>. But in apply you <b>can only pass Array</b>.</p>
+                            <img src="./assets/images/apply.png" alt="">
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p><b>Now what bind does,</b> basically bind return us the function that we can call later in our code.</p>
+                        </li>
+                        <li>
+                            <p><b>Example:</b></p>
+                            <img src="./assets/images/bind.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="classes">
+                    <div class="heading">
+                        <h1>Class in javascript</h1>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>
+                                <b style="font-size: 25px;">Class</b> was introduced in ES6.
+                            </p>
+                        </li>
+                        <li><p>Use the keyword class to create a class.</p></li>
+                        <li><p>Always add a method named <b>constructor():</b></p></li>
+                        <li><p><b>Example:</b></p></li>
+                        <img src="./assets/images/class.png" alt="">
+                        <li><p><b>In Above example:</b> We have created a <b>class</b> using the Keyword class. It contains two methods named as <b>deposit and withdraw</b>. There is a also a constructor which is used to add properties in the class. The constructor will always call <b>whenever a class object is created.</b> </p></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p><b style="font-size: 25px;">Inheritence</b> is used to inherit property from one class to another class.</p>
+                        </li>
+                        <li>
+                            <p>
+                                <img src="./assets/images/inheritance.png" alt="">
+                            </p>
+                        </li>
+                        <li>
+                            <p><b>In the above example,</b> We have created another class named as <b>CurrentAccount</b> that <b>extends</b> the <b>BankAccount class</b>. <b>Extends</b> means we can use BankAccount methods in the CurrentAccount class.</p>
+                        </li>
+                        <li>
+                            <p>
+                                We have also used a <b>super()</b> function. It is used to call the constructor of parent fuction.
+                            </p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>
+                                <b style="font-size: 25px;">Encapsulation</b>
+                                Encapsulation is the bundling of data and the methods that act on that data such that access to that data is restricted from outside the bundle
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                In <b>Inheritence code example</b> we can see that anyone can update the balance directly. <b>Example:</b>
+                                <mark>obj.balance = 5000;</mark> 
+                            </p>
+                        </li>
+                        <li>
+                            <p>We can create <b>balance</b> as a private variable. So that no one can update the balance directly. The <b>private vaiable</b> are only accessible with in that class in which private variable are created. How, we can make a variable <b>private by writing # at the starting of the variable</b>. <mark>Example:</mark> <b>this.#balance</b></p>
+                        </li>
+                        <li>
+                            <p>
+                                To update the value of private variable. We use <b>getter and setters</b>. <b>getter</b> is used to get the value of private variable and <b>setters</b> are used to set the value of the private variable.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Example:</b>
+                            </p>
+                            <img src="./assets/images/getterSetter.png" alt="">
+                        </li>
+                        <li>
+                            <p>
+                                In the above <b>example.</b> We have created a private variable <b>#balance</b> and updating and getting his value using <b>getter</b> and <b>setters</b>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                We can also create a <b>private method</b>. Which is only accessible with in that class in which that method is created. No one from outside the class can access that method. Methods are also created private using the <b>#</b>
+                            </p>
+                        </li>
+                        <li>
+                            <p><b>Example</b></p>
+                            <img src="./assets/images/privateMethod.png" alt="">
+                        </li>
+                        <li>
+                            <p>
+                                In the above <b>example.</b> We have created a method of calculating intrest that is a <b>private method.</b> Let's suppose you have written your <b>logic to calculate intrest</b> and you don't want that outside user can access your method. So you have created it private and it is only accessible with in the class. No outside user can see your logic. <b>So you have Encapsulate the logic.</b>
+                            </p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>
+                                <b style="font-size: 25px;">Static methods</b>
+                                Staic methods and property are those properties whose don't have relation with <b>class</b> instance. Means, to access those properties and methods you don't need to create <b>class instance</b>. In the above example, we have created the class instance and then we are accessing class properties and methods.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Example:</b>
+                            </p>
+                            <img src="./assets/images/static.png" alt="">
+                        </li>
+                        <li>
+                            <p>
+                                In the above example, we have created <b>static</b> method and <b>property</b> and <b>we are accessing those properties and methods with the help of class name not class instance.</b>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clousers">
+                    <div class="heading">
+                        <h1>Clousers in javascript</h1>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>
+                                The function <b>bundled together</b> with its lexical environment forms a clouser.
+                            </p>
+                        </li>
+                        <li>
+                            <p><b>Example:</b></p>
+                            <img src="./assets/images/clousers.png" alt="">
+                            <img src="./assets/images/clouserChrome.png" alt="">
+                        </li>
+                        <li>
+                            <p>
+                                <b>In the above example:</b>
+                                You can find <mark>Closure (x) a:10</mark>
+                                This means, <b>function Y</b> forms a clousers with its lexical environment which is <b>X</b>. So that, it has access to his parent lexical scope.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="callback">
+                    <div class="heading">
+                        <h1>Callbacks in javascript</h1>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>Functions are <b>first class citizen</b> in javascript. Take a function and pass it into another function. So, the function which you pass to another function is called <b>callback function.</b></p>
+                        </li>
+                        <li>
+                            <p>
+                                Callback functions give us access to asynchronous world in a synchronous single threaded language.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Example:</b>
+                                <img src="./assets/images/callback.png" alt="">
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>In the above example</b>
+                                We are passing a callback function inside the <b>x</b> that will be call later in the function <b>x</b>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>setTimeout(()=>{},1000)</b>
+                                function is the best example of the callback function because it takes a function as a callback and execute the function after some time.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="promise">
+                    <div class="heading">
+                        <h1>Promises in javascript</h1>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>The Promise object represents the eventual completion (or failure) of an asynchronous operation.</p>
+                        </li>
+                        <li>
+                            <p>
+                                A Promise is in one of these states:
+                            </p>
+                            <ul>
+                                <li><p>
+                                    <b>pending:</b> initial state, neither fulfilled nor rejected.
+                                </p></li>
+                                <li>
+                                    <p><b>fulfilled:</b> meaning that the operation was completed successfully.</p>
+                                </li>
+                                <li>
+                                    <p><b>rejected:</b> meaning that the operation failed.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>
+                               The <b>pending promise</b> can either be fulfilled with a value or rejected with a reason (error)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                If promise is <b>resolved</b> you can handle it by <b>.then()</b> and if promise rejects. You can handle it by <b>.catch()</b>. Both <b>.then(callback function)</b> and <b>.catch(callback function)</b> takes callback functions. In which, data or error comes.
+                            </p>
+                        </li>
+                        <li>
+                            <p><b>Example:</b></p>
+                            <img src="./assets/images/promise.png" alt="">
+                        </li>
+                        <li>
+                            <p><b>In above example,</b> we have created a promise of registeration flow. In which, we are calling a <b>register function which will register a user</b>, after gettig a response of promise resolved. We have called <b>email send function</b> then <b>login function</b> and at last we call <b>getUserData()</b> function. </p> But in <b>getUserData()</b> function we are <b>rejecting</b> the promise. So that we can know, how to handle it.
+                        </li>
+                        <li>
+                            <p>
+                                Like <b>.then()</b> and <b>.catch()</b>. We have other methods like <b>Promise.all()</b>, <b>Promise.any()</b>,
+                                <b>Promise.finally()</b>, <b>Promise.race()</b>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b style="font-size:25px"> Promise.all()</b> will handle all the promises. Which is passed by us in an <b>array</b> as an parameter in it. As shown in the below example.
+                            </p>
+                            <p>
+                                <b>Promise.all()</b> return us the array of resolved promises. Basically, it returns us a value <mark>Promise.all([register(),sendEmail(),getUserData()]).then((values)=>{
+                                    console.log(values);
+                                }).catch((e)=>{
+                                    console.log(e);
+                                })</mark>
+                            </p>
+                            <p><b>Example:</b></p>
+                            <img src="./assets/images/promiseAll.png" alt="">
+                        </li>
+                        <li>
+                            <p>
+                                <b style="font-size: 25px;">Promise.any()</b> this method is used to return the first promise that fulfills.
+                            </p>
+                            <p>So as soon as a promise is fulfilled, it will not wait for other promises to complete.</p>
+                            <p><b>Example:</b></p>
+                            <img src="./assets/images/any.png" alt="">
+                        </li>
+                        <li>
+                            <p>
+                                <b style="font-size: 25px;">Promise.finally()</b> will always run. It doesn't matter wheather the promise is <b>fullfilled</b> or <b>reject</b>. The <b>finally</b> will always run.
+                            </p>
+                            <p>
+                                <b>Example</b>
+                            </p>
+                            <img src="./assets/images/finally.png" alt="">
+                        </li>
+                        <li>
+                            <p>
+                                <b>In the above example,</b> We are adding two digits so after adding the numbers <b>.then()</b> will run and then immediately <b>.finally()</b> will also run.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b style="font-size: 25px;">Promise.race()</b>
+                                The <b>Promise.race()</b> method returns a Promise that is resolved or rejected, as soon as one of the promises in an iterable, such as an array, fulfills or rejects, with the value or reason from that Promise.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Example:</b>
+                            </p>
+                            <img src="./assets/images/race.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="await">
+                    <div class="heading">
+                        <h1>Async Await in Javascript</h1>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>We can say <b>Async await</b> is short hand of <b>Promises</b>.</p>
+                            <p>Like in <b>Promises</b> we use <b>.then()</b> and <b>.catch()</b> but in <b>async await</b> we only use await keyword to handle all the asynchronous request.</p>
+                        </li>
+                        <li>
+                            <p>In <b>Async await</b> we also use <b>try{}</b> and <b>catch{}</b> for error handling.</p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Example:</b>
+
+                            </p>
+                            <img src="./assets/images/async-Promise.png" alt="">
+                        </li>
+                        <li>
+                            <p>
+                                <b>In the above example,</b>
+                                You can see the difference b/w <b>Async await</b> and <b>Promises</b>. To handle promise we use <b>.then()</b> in Promises but in <b>Async await</b> we use <b>await</b> keyword.
+                            </p>
+                            <p>In promise we use <b>.catch().</b> but in <b>Async await</b> we use <b>try{} and catch()</b> for error handling.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="XMLhttp">
+                    <div class="heading">
+                        <h1>XMLhttpRequest in Javascript</h1>
+                    </div>
+                    <ul>
+                        <li>
+                            <p><b>XMLHttpRequest(XHR)</b> objects are used to intract with servers. It wil used to send or get data from the server without page refersh.</p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>XMLHttpRequest</b> can be used to retrieve any type of data, not just XML
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b style="font-size: 25px;">How to use XHR</b>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                We will use <b>XMLHttpRequest()</b> class and will create the instance of this class after that we can use its methdos to do requests to the server.
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        First method we will use <b>open()</b> method. In this method, we will pass to argumatens one is <b>Request method</b> and second one is <b> request URL</b>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Second things is <b>onload event</b> which is used to get response from the server.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Third thing is <b>send() method</b>. Used to send request on the server</p>
+                                </li>
+
+                                <li>
+                                    <p><b>Example</b></p>
+                                    <img src="./assets/images/xhr.png" alt="">
+                                </li>
+                                <li>
+                                    <p>
+                                        Instead of using <b>JSON.parse()</b> we can use <b>responseType</b> property to tell that we want response in JSON.
+                                    </p>
+                                    <p>
+                                        <mark>xhr.responseType = 'json';</mark>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>To handle error we have listener named as <b>onerror</b>. Which is used to handle errors.</p>
+                                    <p>
+<pre>
+<mark>
+    xhr.onerror = () => {
+        console.log("errror")
+    }
+</mark>
+</pre>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>If you want to send data to the server. <b>You send data in the send() method.</b></p>
+                                    <p><mark>xhr.send({name:"Developer",age:22})</mark></p>
+                                </li>
+                                <li>
+                                    <p>But first convert data to <b>JSON.stringify()</b> and also <b>set headers</b> with the help of <b>xhr.setRequestHeader()</b> method.</p>
+                                </li>
+                                <li>
+                                    <p><b>Example:</b></p>
+                                    <img src="./assets/images/headers.png" alt="">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/index.js"></script>
+</body>
+</html>
